@@ -46,4 +46,7 @@ The application is **containerized using Docker** and can be deployed on cloud p
 ---
 
 ## 📂 Project Structure
-weather-dashboard/ ├── index.html ├── style.css ├── script.js └── README.md
+weather-dashboard/
+ ├── index.html └── README.md
+ ├── style.css
+ ├── script.js 
