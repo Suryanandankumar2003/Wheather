@@ -116,15 +116,6 @@ HTTPS is required for GPS functionality
 
 ---
 
-📌 Resume Summary
-
-> Built a Dockerized Weather & AQI dashboard with real-time data, GPS-based location detection, timezone-aware clocks, and health-focused AQI guidance, deployed on cloud infrastructure.
-
-
-
-
----
-
 📜 License
 
 This project is open-source and intended for learning and personal use.
