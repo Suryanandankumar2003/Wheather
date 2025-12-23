@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Weather & AQI Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="app">
+
+    <!-- India Running Clock -->
+    <div class="india-clock">
+        🇮🇳 <span id="indiaTime"></span>
+    </div>
+
+    <h1>🌍 Weather Dashboard</h1>
+
+    <!-- Search Section -->
+    <div class="search-box">
+        <input 
+            type="text" 
+            id="city" 
+            placeholder="Enter city name"
+            onkeyup="searchCity()"
+        >
+        <button onclick="getWeather()">Search</button>
+        <button class="location-btn" onclick="getCurrentLocationWeather()">📍</button>
+    </div>
+
+    <!-- City Suggestions -->
+    <ul class="suggestions" id="suggestions"></ul>
+
+    <!-- Loader -->
+    <div class="loader hidden" id="loader">
+        <div class="spinner"></div>
+        <p>Loading...</p>
+    </div>
+
+    <!-- Dashboard -->
+    <div class="dashboard hidden" id="dashboard">
+        <h2 id="cityName"></h2>
+
+        <div class="summary">
+            <p id="weatherCondition"></p>
+            <p>💨 Wind Speed: <span id="windSpeed"></span> km/h</p>
+            <p>🕒 Local Time: <span id="localTime"></span></p>
+        </div>
+
+        <div class="cards">
+            <div class="card today">
+                <h3>Today</h3>
+                <p>🌡 Current: <span id="todayCurrent"></span> °C</p>
+                <p>⬆ Max: <span id="todayMax"></span> °C</p>
+                <p>⬇ Min: <span id="todayMin"></span> °C</p>
+            </div>
+
+            <div class="card yesterday">
+                <h3>Yesterday</h3>
+                <p>⬆ Max: <span id="yesterdayMax"></span> °C</p>
+                <p>⬇ Min: <span id="yesterdayMin"></span> °C</p>
+            </div>
+
+            <div class="card tomorrow">
+                <h3>Tomorrow</h3>
+                <p>⬆ Max: <span id="tomorrowMax"></span> °C</p>
+                <p>⬇ Min: <span id="tomorrowMin"></span> °C</p>
+            </div>
+
+            <div class="card aqi">
+                <h3>Air Quality Index</h3>
+                <p class="aqi-value" id="aqiValue"></p>
+                <p id="aqiStatus"></p>
+            </div>
+        </div>
+
+        <div class="suggestion">
+            <h3>🫁 Health Advice</h3>
+            <p id="aqiSuggestion"></p>
+            <p><strong>Risk:</strong> <span id="aqiRisk"></span></p>
+            <p><strong>Activity:</strong> <span id="aqiActivity"></span></p>
+            <p><strong>Mask:</strong> <span id="aqiMask"></span></p>
+        </div>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
